@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Code Reviews</title>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<link rel="stylesheet" href="dist/styles.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2 class="blue">Code Reviews</h2>
+				<h3>Demystified</h3>
+				<p>Raul Estrela</p>
+				<small>May 2024</small>
+			</section>
+			<section data-background-iframe="https://google.github.io/eng-practices/" data-background-interactive>
+				<div
+					style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+					<h2>Disclaimer</h2>
+					<p></p>
+				</div>
+			</section>
+			<section data-transition="zoom">
+				<h3>Back to the basics</h3>
+			</section>
+			<section data-transition="zoom">
+				<section>
+					<h3>All code is garbage &trade;</h3>
+				</section>
+				<section>
+					<h3 class="blue">Humans are complex</h3>
+					<h4>... And Developers are super weird creatures</h4>
+				</section>
+				<section>
+					<h3 class="blue">Communication is difficult</h3>
+					<h4>... appreciation and criticism even more</h4>
+				</section>
+				<section>
+					<h3 class="blue">We tend to be too creative</h3>
+				</section>
+			</section>
+			<section>
+				<h3>What are the real problems with Code Reviews?</h3>
+			</section>
+			<section>
+				<h4>Problem #1</h4>
+				<section>
+					<h3 class="blue">Too much effort in Code Reviews</h3>
+				</section>
+			</section>
+			<section>
+				<h4>Problem #2</h4>
+				<section>
+					<h3 class="blue">We are not good at reviewing code</h3>
+				</section>
+			</section>
+			<section data-transition="zoom">
+				<h2>Key Ideas</h2>
+				<h4>Avoiding misconceptions 😕</h4>
+			</section>
+			<section>
+				<h4>Key Ideas</h4>
+				<section>
+					<h3 class="blue">Code Reviews should not block or slow down development</h3>
+					<p> Authors must be able to make progress on their tasks and if no improvements are added to the
+						codebase, then the codebase never improves.</p>
+				</section>
+				<section>
+					<h3 class="blue">Code Reviews should be short and simple as possible</h3>
+					<p>It is the duty of the Author to make sure that changes performed can be quickly reviewed so large
+						and risky code changes can be avoided.</p>
+				</section>
+				<section>
+					<h3 class="blue">Code Reviews should be fast</h3>
+					<p>As a Reviewer if you are not in the middle of a focused task, you should do a code review shortly
+						after it comes in. One business day is the maximum time it should take to respond. Feedback
+						should be given as fast as possible.</p>
+				</section>
+				<section>
+					<h3 class="blue">Code Reviews should build trust</h3>
+					<p>As team members appreciate each other’s skills through reviews, it builds trust - a crucial
+						element for remote team cohesion.</p>
+				</section>
+				<section>
+					<h3 class="blue">Code Reviews provide teaching opportunities</h3>
+				</section>
+				<section>
+					<h3 class="blue">Reviewers are accountable for the code under revision</h3>
+					<p>It is the duty of the Reviewer to make sure that each change is of such a quality that the
+						overall code health of their codebase is not decreasing as time goes on.</p>
+				</section>
+				<section>
+					<h3 class="blue">Code Reviews are not a subject of preference</h3>
+					<p>Technical facts and data overrule opinions and personal preferences (aspects of software design
+						are almost never a pure style issue or just a personal preference).</p>
+				</section>
+				<section>
+					<h3 class="blue">Good communication is key</h3>
+				</section>
+				<section>
+					<blockquote>
+						&ldquo;There is no such thing as “perfect” code - there is only better code. Instead of seeking
+						perfection, what a code review should seek is continuous improvement.&rdquo;
+					</blockquote>
+				</section>
+			</section>
+			<section data-transition="zoom">
+				<h2 class="blue">Principles</h2>
+				<h4><em>Things Authors & Reviewers should care about in code</h4></em>
+			</section>
+			<section>
+				<img width="300" data-src="dist/assets/boring.gif">
+			</section>
+			<section>
+				<h5>Principles</h5>
+				<section>
+					<h3>Functionality ⚙️</h3>
+					<p><em>The functionality is good for the users of the code?</em></p>
+				</section>
+				<section>
+					<h3>Design 🎨</h3>
+					<p>The code is well-designed?</p>
+				</section>
+				<section>
+					<h3>Complexity 🤯</h3>
+					<p><em>The code is more complex than it needs to be?</em></p>
+				</section>
+				<section>
+					<h3>Tests & Coverage 🧪</h3>
+					<p><em>Code has appropriate tests and tests are well designed?</em></p>
+				</section>
+				<section>
+					<h3>Comments 💬</h3>
+					<p><em>Are all of the comments actually necessary and explaning the why?</em></p>
+				</section>
+				<section>
+					<h3>Style 😎</h3>
+					<p><em>The code conforms to project style guidelines?</em></p>
+				</section>
+				<section>
+					<h3>Consistency 🤓</h3>
+					<p><em>Code is consistent with the recommendations or the surrounding code?</em></p>
+				</section>
+				<section>
+					<h3>Documentation 🖹</h3>
+					<p>Code is appropriately documented?</p>
+				</section>
+			</section>
+			<section data-transition="zoom">
+				<h2 class="blue">Authors</h2>
+				<h4><em>Two steps on how to start a successful Code Review</em></h4>
+			</section>
+			<section>
+				<h5>Step 1 - Make sure the code is ready for review</h5>
+				<section>
+					<h3 class="blue">Review Principles</h3>
+					<p><em>Design • Functionality • Comments • Style • Consistency • Documentation • Complexity • Tests
+							& Coverage</em></p>
+				</section>
+				<section>
+					<h3 class="blue">Make good use of git</h3>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						Prefer working **only with 1 commit** with all the changes you want to integrate containing the corresponding task identifier and a short and clear description of <b>why</b> this change was performed.
+						```shell []
+						TASK123 - Improve user data mapping and add new fields
+                        
+						It was found that a few user fields were not being mapped.
+						Plus, the custom mapping approach lacked support for complex
+						data types. For that reason, the mapping strategy was also 
+						refactored to make use of the library mapping4js. This commit
+						addresses these two issues.
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						Stacking changes with `git rebase` 
+						```shell []
+						// amends an existing local commit
+						git commit --amend
+
+						// rebase changes from remote (rewrite git history)
+						git rebase --interative
+
+						// update your commit
+						git push -f
+						```
+					</script>
+				</section>
+			</section>
+			<section>
+				<h5>Step 2 - Create the Code Review</h5>
+				<section>
+					<h3 class="blue">Use a review tool</h3>
+					<p><em>It will prefil automatically the Code Review details...</em></p>
+				</section>
+				<section>
+					<h3 class="blue">Invite the right <b>Audience</b></h3>
+					<ul>
+						<li>Codebase owners</li>
+						<li>Known subject-matter experts</li>
+						<li>Interested parties</li>
+					</ul>
+				</section>
+				<section>
+					<h4 class="blue">Make sure audience is expecting the changes</h4>
+					<p><em>At least try to make sure of that...</em></p>
+				</section>
+				<section>
+					<h3 class="blue">Be <s>nice</s> kind</h3>
+					<ul>
+						<li>Provide evidences (screenshots, logs, etc)</li>
+						<li>Leave any comments of your own</li>
+					</ul>
+				</section>
+			</section>
+			<section data-transition="zoom">
+				<h2 class="blue">Reviewers</h2>
+				<h4><em>3 steps for a successful Code Review</em></h4>
+			</section>
+			<section>
+				<h3>Step 1 - Take a broad view of the change</h3>
+			</section>
+			<section>
+				<h5 class="small">Step 1 - Take a broad view of the change</h5>
+				<section>
+					<h4 class="blue">What is this about?</h4>
+					<p>Look at the Code Review description, the commit and what the code does in general. Does this
+						change even
+						make sense?</p>
+				</section>
+				<section>
+					<h5 class="blue">Reject the change</h5>
+					<p>If this change shouldn't have happened in the first place, please respond <b>immediately</b> with
+						an
+						explanation of why the change should not be happening.</p>
+				</section>
+				<section>
+					<h5 class="blue">Comment Etiquette</h5>
+					<p>When you reject a change like this, it's important suggest to the developer what they
+						should have done instead and reject the code.</p>
+					<ul>
+						<li>Don't assume the obvious</li>
+						<li>Ask questions</li>
+						<li>Be <s>nice</s> kind</li>
+						<li>Be courteous and respectful</li>
+						<li>Consider others point of view</li>
+					</ul>
+				</section>
+				<section>
+					<h5>Request Changes ⚠️</h5>
+					<blockquote class="small">
+						&ldquo;There was a recent announcement that the library mapping4js
+						won't be supported anymore from version 2.5. <b class="blue">(circumstance)</b>
+						<br><br>
+						I'm afraid this
+						is not the best way to go. I'm aware of the current limitation
+						of the existing mapping implementation (...) <b class="blue">(acknowledge)</b>
+						<br><br>but I was just having
+						a look on this other library (...), seems to be a better approach
+						in the long term. What to you think? <b class="blue">(guidance/openness)</b>
+						<br><br>Btw, I really liked the idea of replacing the custom library! <b
+							class="blue">(positivity)</b>&rdquo;
+					</blockquote>
+				</section>
+				<section>
+					<h5>Request Changes ⚠️</h5>
+					<blockquote class="small">
+						&ldquo;I found this idea really interesting but I'm afraid that doing
+						such a risky change at this specific time will impact delivery
+						of other features currently being implemented. <b class="blue">(circumstance)</b>
+						Your point in
+						adding this library is totally valid <b class="blue">(acknowledge)</b>, but I was
+						having a look
+						and I found this alternative
+						Here's an how we <b class="blue">(teamwork)</b> could do possibly achieve a good
+						result:&rdquo;
+					</blockquote>
+					<pre>
+						<code data-trim data-noescape class="small">
+							// form-validator.js
+							const complex = (typeA, typeB) => { typeA, typeB }
+
+							// validations.yml
+							address: use(complex)
+						</code>
+					</pre>
+					<blockquote class="small">
+						&ldquo;What do you think if we proceed with this workaround for now and
+						add the library later? <b class="blue">(guidance)</b>&rdquo;
+					</blockquote>
+				</section>
+				<section>
+					<h5>Request Changes ⚠️</h5>
+					<blockquote class="small">
+						&ldquo;At the surface the changes look good <b class="blue">(positivity)</b>, tests
+						are passing
+						but testing coverage was affected a bit. <b class="blue">(circumstance)</b> I guess
+						you forgot to
+						test the new mapping functions. Also, there are 3 concerning
+						code quality issues raised by Sonar. <b class="blue">(guidance/openness)</b> Can you
+						please have a look?&rdquo;
+					</blockquote>
+				</section>
+			</section>
+			<section>
+				<h5 class="blue">Looks good, proceed to Step 2 ✔️</h5>
+			</section>
+			<section>
+				<h3>Step 2 - Examine the main parts of the code</h3>
+			</section>
+			<section>
+				<h5 class="small">Step 2 - Examine the main parts of the code</h5>
+				<section>
+					<h5 class="blue">Look for the main change</h5>
+					<p>Find the file or files that are the “main” part of the change. Often, there is one file that has
+						the
+						largest number of logical changes, and it's the major piece of the work done. Look at these
+						major parts
+						first. <b>This helps give context to all of the smaller parts, and generally accelerates doing
+							the
+							code review.</b></p>
+				</section>
+				<section>
+					<h5 class="blue">Identify any major problem</h5>
+					<p> If you see some major design problems with this part of the code, you should send those comments
+						<b>immediately</b> and reject the changes, even if you have time to review the rest of the
+						changes
+						right
+						now.
+					</p>
+				</section>
+				<section>
+					<h5 class="blue">Comment Etiquette</h5>
+					<ul>
+						<li>Don't assume the obvious</li>
+						<li>Ask questions</li>
+						<li>Be <s>nice</s> kind</li>
+						<li>Be courteous and respectful</li>
+						<li>Consider others point of view</li>
+					</ul>
+				</section>
+				<section>
+					<h5>Request Changes ⚠️</h5>
+					<blockquote class="small">
+						&ldquo;I'm believe this function is not typesafe and this might raise some problems mapping
+						mixed
+						numeric types. Plus, it doesn't check for empty values. I've noticed already that the numeric
+						property
+						`total` already lost the desired precision, and unit tests show that if the value if `tax` is
+						absent
+						the default value will be null. This can raise some problems in the upstream
+						services. <b class="blue">(circumstance)</b> Leaving here an example on how can we
+						possibly overcome this, let me know your
+						thoughts:&rdquo; <b class="blue">(guidance/teamwork/openness)</b>
+
+					</blockquote>
+					<pre>
+						<code data-trim data-noescape class="small">
+							// BalanceMapper.java
+							var taxMapper = new NumberMapper&lt;BigDecimal&gt; { (...) }
+							var totalMapper = new NumberMapper&lt;BigDecimal&gt; { (...) }
+							// Mapper.java
+							(...).tax(taxMapper.map(tax)).total(totalMapper.map(total))(...)
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h5>Request Changes ⚠️</h5>
+					<blockquote class="small">
+						&ldquo;This explicit constructor can be avoided, plus this class can be immutable. <b
+							class="blue">(circumstance)</b>
+						Please consider similar use cases in this package, where the Builder pattern is being
+						used. <b class="blue">(guidance)</b> I believe it's an improvement that brings value
+						without too much effort. <b class="blue">(awareness)</b> Please
+						let me know what do you think and feel free to suggest an alternative approach.&rdquo;<b
+							class="blue">(teamwork/openness)</b>
+					</blockquote>
+				</section>
+				<section>
+					<h5>Request Changes ⚠️</h5>
+					<blockquote class="small">
+						&ldquo;The stubbing of these 3 methods in this test class are using explicit values,
+						this does not guarantee that the correct datatypes conversion is happening <b
+							class="blue">(circumstance)</b>, right?
+						Please let me know if there's anything I'm missing.&rdquo;<b
+							class="blue">(teamwork/openness)</b>
+					</blockquote>
+				</section>
+			</section>
+			<section>
+				<h5 class="blue">Looks good, proceed to Step 3 ✔️</h5>
+			</section>
+			<section>
+				<h3>Step 3 - Review the rest of the changes in an appropriate sequence</h3>
+			</section>
+			<section>
+				<h5 class="small">Step 3 - Review the rest of the changes in an appropriate sequence</h5>
+				<section>
+					<h5 class="blue">Review logical sequence</h5>
+				</section>
+				<section>
+					<pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers="|4,8-11|17|22-24"><script type="text/template">
+						import React, { useState } from 'react';
+
+						function Example() {
+						  const [count, setCount] = useState(0);
+
+						  return (
+						    <div>
+						      <p>You clicked {count} times</p>
+						      <button onClick={() => setCount(count + 1)}>
+						        Click me
+						      </button>
+						    </div>
+						  );
+						}
+
+						function SecondExample() {
+						  const [count, setCount] = useState(0);
+
+						  return (
+						    <div>
+						      <p>You clicked {count} times</p>
+						      <button onClick={() => setCount(count + 1)}>
+						        Click me
+						      </button>
+						    </div>
+						  );
+						}
+					</script></code></pre>
+				</section>
+			</section>
+			<section>
+				<h5 class="blue">Read the tests</h5>
+				<p> Sometimes it's also helpful to read the tests first before you read the main code,
+					because then you have an idea of what the change is supposed to be doing.
+				</p>
+			</section>
+			<section>
+				<h5 class="blue">Identify improvements</h5>
+				<p> At this step you might suggest doing some things differently or some improvements to the
+					original solution.
+				</p>
+			</section>
+			<section>
+				<h5 class="blue">Comment Etiquette</h5>
+				<ul>
+					<li>Don't assume the obvious</li>
+					<li>Ask questions</li>
+					<li>Be <s>nice</s> kind</li>
+					<li>Be courteous and respectful</li>
+					<li>Consider others point of view</li>
+					<li class="blue">Label comment serverity</li>
+				</ul>
+			</section>
+			<section>
+				<h5>Suggestion</h5>
+				<blockquote class="small">
+					&ldquo;<b class="blue">Suggestion:</b> replace if else with switch statement
+					(readibility). Example:&rdquo;
+				</blockquote>
+				<pre>
+						<code data-trim data-noescape class="small">
+							private String getGenderDescription(GenderCode gender) {
+								return switch (gender) {
+									case F -> "Female";
+									case M -> "Male";
+									case U -> "Unknown";
+									default -> "None";
+								};
+							}
+						</code>
+					</pre>
+			</section>
+			<section>
+				<h5>NIT Comment</h5>
+				<blockquote class="small">
+					&ldquo;<b class="blue">Nit:</b> change parameter name to "genderCode" instead of
+					"gender"&rdquo;
+				</blockquote>
+			</section>
+			<section>
+				<h5>FYI Comment</h5>
+				<blockquote class="small">
+					&ldquo;<b class="blue">FYI:</b> This testing class is becoming unmaintainable. I don't
+					expect you to do this in this
+					CL,
+					but you may find this interesting to think about for the future.&rdquo;
+				</blockquote>
+			</section>
+			<section>
+				<h4 style="color: yellow">Compliment the Author on the good things</h4>
+				<blockquote class="small">
+					&ldquo;Nice detail. Thanks for refactoring this part here, it was a bit messy.&rdquo;
+				</blockquote>
+				<img width="300" data-src="dist/assets/cool.gif">
+			</section>
+			</section>
+			<section data-transition="zoom">
+				<h3>Finishing and closing a Code Review</h3>
+			</section>
+			<section>
+				<h5 class="small">Finishing and closing a Code Review</h5>
+				<section>
+					<h5 class="blue">Find closure</h5>
+					<p>All questions raised are <b>closed by the reviewers</b>, and there's mutual agreement between
+						both parts
+						on the changes performed.</p>
+				</section>
+				<section>
+					<h5 class="blue">Code Review is approved</h5>
+					<p>The necessary number of reviewers accepted the changes proposed
+					</p>
+				</section>
+
+			</section>
+			<section data-transition="zoom">
+				<h3>Final considerations</h3>
+			</section>
+			<section>
+				<h5 class="blue">Upsetting Developers</h5>
+				<h3>Do it if there's a good reason</h3>
+			</section>
+			<section>
+				<h5 class="blue">There's no shame in doing mistakes</h5>
+				<h3>We all do</h3>
+			</section>
+			<section>
+				<h5 class="blue">"I will clean this up later"</h5>
+				<h3>Avoid it as much as possible</h3>
+			</section>
+			<section>
+				<h3 class="blue">Be <s>kind</s> nice too</h3>
+				<h3>It Doesn't Hurt</h3>
+			</section>
+			<section>
+				<h3 class="blue">Ask for help</h3>
+				<h4>We're a team</h4>
+			</section>
+			<section>
+				<h3 class="blue">Don't Take it Personally</h3>
+				<h5>Never respond in anger to code review comments, really</h5>
+				<img width="300" data-src="dist/assets/angry.gif">
+			</section>
+			<section>
+				<h3 class="blue">Avoid Conflicts</h3>
+				<h4>Who is right? It doesn't really matter...</h4>
+			</section>
+			<section>
+				<h1>🥁</h1>
+			</section>
+			<section>
+				<h2 class="blue">All code is garbage</h2>
+				<h4>It's up to us to make it a little bit better! 🌈</h4>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		Reveal.initialize({
+			hash: true,
+			plugins: [RevealMarkdown, RevealHighlight]
+		});
+	</script>
+</body>
+
+</html>
