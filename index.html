@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>Code Reviews</title>
+	<title>Code Reviews | Demystified</title>
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
 	<link rel="stylesheet" href="dist/theme/black.css">
@@ -16,32 +16,34 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h2 class="blue">Code Reviews</h2>
-				<h3>Demystified</h3>
+				<h3 class="blue">Code Reviews</h3>
+				<h2>Demystified</h2>
 				<p>Raul Estrela</p>
 				<small>May 2024</small>
 			</section>
+			<section data-background-iframe="https://estrela.me/" data-background-color="white">
+				<p class="small">🔗 <a
+						href="https://estrela.me/code-reviews-demystified">https://estrela.me/code-reviews-demystified</a>
+				</p>
+			</section>
+			<section data-transition="zoom">
+				<h3 class="blue">Motivation</h3>
+				<img width="300" data-src="dist/assets/scared.gif">
+			</section>
+			<section>
+				<img width="300" data-src="dist/assets/book.png">
+			</section>
 			<section data-background-iframe="https://google.github.io/eng-practices/" data-background-interactive>
-				<div
-					style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-					<h2>Disclaimer</h2>
-					<p></p>
-				</div>
 			</section>
 			<section data-transition="zoom">
-				<h3>Back to the basics</h3>
-			</section>
-			<section data-transition="zoom">
-				<section>
-					<h3>All code is garbage &trade;</h3>
-				</section>
 				<section>
 					<h3 class="blue">Humans are complex</h3>
-					<h4>... And Developers are super weird creatures</h4>
+					<h4>we are all different</h4>
 				</section>
 				<section>
 					<h3 class="blue">Communication is difficult</h3>
-					<h4>... appreciation and criticism even more</h4>
+					<h4>appreciation and criticism even more</h4>
+					<img width="700" data-src="dist/assets/comment.png">
 				</section>
 				<section>
 					<h3 class="blue">We tend to be too creative</h3>
@@ -59,8 +61,14 @@
 			<section>
 				<h4>Problem #2</h4>
 				<section>
-					<h3 class="blue">We are not good at reviewing code</h3>
+					<h3 class="blue">We're not <span style="color: white;">very</span> good at revewing code</h3>
 				</section>
+			</section>
+			<section>
+				<h2 class="blue">Terminology</h2>
+				<h4>Author</h4>
+				<h4>Reviewer</h4>
+				<h4>Code Review = Pull Request = Merge Request</h4>
 			</section>
 			<section data-transition="zoom">
 				<h2>Key Ideas</h2>
@@ -70,37 +78,25 @@
 				<h4>Key Ideas</h4>
 				<section>
 					<h3 class="blue">Code Reviews should not block or slow down development</h3>
-					<p> Authors must be able to make progress on their tasks and if no improvements are added to the
-						codebase, then the codebase never improves.</p>
 				</section>
 				<section>
-					<h3 class="blue">Code Reviews should be short and simple as possible</h3>
-					<p>It is the duty of the Author to make sure that changes performed can be quickly reviewed so large
-						and risky code changes can be avoided.</p>
+					<h3 class="blue">Code Reviews should as short and simple as possible</h3>
 				</section>
 				<section>
 					<h3 class="blue">Code Reviews should be fast</h3>
-					<p>As a Reviewer if you are not in the middle of a focused task, you should do a code review shortly
-						after it comes in. One business day is the maximum time it should take to respond. Feedback
-						should be given as fast as possible.</p>
 				</section>
 				<section>
 					<h3 class="blue">Code Reviews should build trust</h3>
-					<p>As team members appreciate each other’s skills through reviews, it builds trust - a crucial
-						element for remote team cohesion.</p>
 				</section>
 				<section>
-					<h3 class="blue">Code Reviews provide teaching opportunities</h3>
+					<h3 class="blue">Code Reviews provide learning opportunities</h3>
 				</section>
 				<section>
-					<h3 class="blue">Reviewers are accountable for the code under revision</h3>
-					<p>It is the duty of the Reviewer to make sure that each change is of such a quality that the
-						overall code health of their codebase is not decreasing as time goes on.</p>
+					<h3 class="blue">Everyone is accountable</h3>
 				</section>
 				<section>
 					<h3 class="blue">Code Reviews are not a subject of preference</h3>
-					<p>Technical facts and data overrule opinions and personal preferences (aspects of software design
-						are almost never a pure style issue or just a personal preference).</p>
+					<p>Aspects of software design are almost never a pure style issue or just a personal preference</p>
 				</section>
 				<section>
 					<h3 class="blue">Good communication is key</h3>
@@ -108,8 +104,11 @@
 				<section>
 					<blockquote>
 						&ldquo;There is no such thing as “perfect” code - there is only better code. Instead of seeking
-						perfection, what a code review should seek is continuous improvement.&rdquo;
+						perfection, what a code review (Reviewer) should seek is continuous improvement.&rdquo;
 					</blockquote>
+				</section>
+				<section>
+					<h2>All code is garbage &#8482;</h2>
 				</section>
 			</section>
 			<section data-transition="zoom">
@@ -159,7 +158,7 @@
 				<h4><em>Two steps on how to start a successful Code Review</em></h4>
 			</section>
 			<section>
-				<h5>Step 1 - Make sure the code is ready for review</h5>
+				<h5 class="small">Step 1 - Make sure the code is ready for review</h5>
 				<section>
 					<h3 class="blue">Review Principles</h3>
 					<p><em>Design • Functionality • Comments • Style • Consistency • Documentation • Complexity • Tests
@@ -199,7 +198,7 @@
 				</section>
 			</section>
 			<section>
-				<h5>Step 2 - Create the Code Review</h5>
+				<h5 class="small">Step 2 - Create the Code Review</h5>
 				<section>
 					<h3 class="blue">Use a review tool</h3>
 					<p><em>It will prefil automatically the Code Review details...</em></p>
@@ -214,7 +213,7 @@
 				</section>
 				<section>
 					<h4 class="blue">Make sure audience is expecting the changes</h4>
-					<p><em>At least try to make sure of that...</em></p>
+					<p><em>Avoid surprises...</em></p>
 				</section>
 				<section>
 					<h3 class="blue">Be <s>nice</s> kind</h3>
@@ -254,7 +253,7 @@
 						<li>Ask questions</li>
 						<li>Be <s>nice</s> kind</li>
 						<li>Be courteous and respectful</li>
-						<li>Consider others point of view</li>
+						<li>Consider differents point of view</li>
 					</ul>
 				</section>
 				<section>
@@ -291,7 +290,7 @@
 							// form-validator.js
 							const complex = (typeA, typeB) => { typeA, typeB }
 
-							// validations.yml
+							// validations.js
 							address: use(complex)
 						</code>
 					</pre>
@@ -347,13 +346,13 @@
 						<li>Ask questions</li>
 						<li>Be <s>nice</s> kind</li>
 						<li>Be courteous and respectful</li>
-						<li>Consider others point of view</li>
+						<li>Accept different points of view</li>
 					</ul>
 				</section>
 				<section>
 					<h5>Request Changes ⚠️</h5>
 					<blockquote class="small">
-						&ldquo;I'm believe this function is not typesafe and this might raise some problems mapping
+						&ldquo;I believe this function is not typesafe and this might raise some problems mapping
 						mixed
 						numeric types. Plus, it doesn't check for empty values. I've noticed already that the numeric
 						property
@@ -369,9 +368,9 @@
 						<code data-trim data-noescape class="small">
 							// BalanceMapper.java
 							var taxMapper = new NumberMapper&lt;BigDecimal&gt; { (...) }
-							var totalMapper = new NumberMapper&lt;BigDecimal&gt; { (...) }
+							var transactionsMapper = new NumberMapper&lt;Long&gt; { (...) }
 							// Mapper.java
-							(...).tax(taxMapper.map(tax)).total(totalMapper.map(total))(...)
+							(...).tax(taxMapper.map(tax)).transactions(transactionsMapper.map(transactions))(...)
 						</code>
 					</pre>
 				</section>
@@ -390,7 +389,7 @@
 				<section>
 					<h5>Request Changes ⚠️</h5>
 					<blockquote class="small">
-						&ldquo;The stubbing of these 3 methods in this test class are using explicit values,
+						&ldquo;The stubbing of these 3 methods in this test class are using generic values,
 						this does not guarantee that the correct datatypes conversion is happening <b
 							class="blue">(circumstance)</b>, right?
 						Please let me know if there's anything I'm missing.&rdquo;<b
@@ -407,7 +406,7 @@
 			<section>
 				<h5 class="small">Step 3 - Review the rest of the changes in an appropriate sequence</h5>
 				<section>
-					<h5 class="blue">Review logical sequence</h5>
+					<h3 class="blue">Review logical sequence</h3>
 				</section>
 				<section>
 					<pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers="|4,8-11|17|22-24"><script type="text/template">
@@ -460,7 +459,7 @@
 					<li>Ask questions</li>
 					<li>Be <s>nice</s> kind</li>
 					<li>Be courteous and respectful</li>
-					<li>Consider others point of view</li>
+					<li>Accept different points of view</li>
 					<li class="blue">Label comment serverity</li>
 				</ul>
 			</section>
@@ -506,6 +505,9 @@
 				</blockquote>
 				<img width="300" data-src="dist/assets/cool.gif">
 			</section>
+			<section>
+				<h3>Approve the code change ✔️</h3>
+			</section>
 			</section>
 			<section data-transition="zoom">
 				<h3>Finishing and closing a Code Review</h3>
@@ -523,10 +525,34 @@
 					<p>The necessary number of reviewers accepted the changes proposed
 					</p>
 				</section>
-
 			</section>
 			<section data-transition="zoom">
 				<h3>Final considerations</h3>
+			</section>
+			<section>
+				<h5 class="blue">Checkout the code</h5>
+				<h3>It helps understanding the changes</h3>
+			</section>
+			<section>
+				<h5 class="blue">Don't hide it</h5>
+				<h3>Share</h3>
+			</section>
+			<section>
+				<h5 class="blue">Automate</h5>
+				<h5 class="blue">Automate</h5>
+				<h5 class="blue">Automate</h5>
+				<h5 class="blue">Automate</h5>
+				<h5 class="blue">Automate</h5>
+				<h5 class="blue">Automate</h5>
+				<h5 class="blue">Automate</h5>
+				<h5 class="blue">Automate</h5>
+				<h5 class="blue">Automate</h5>
+				<h5 class="blue">Automate</h5>
+				<h5 class="blue">Automate</h5>
+			</section>
+			<section>
+				<h5 class="blue">Know your team</h5>
+				<h3>We are all different</h3>
 			</section>
 			<section>
 				<h5 class="blue">Upsetting Developers</h5>
@@ -541,6 +567,9 @@
 				<h3>Avoid it as much as possible</h3>
 			</section>
 			<section>
+				<h5 class="blue">It's ok too have long discussions</h5>
+			</section>
+			<section>
 				<h3 class="blue">Be <s>kind</s> nice too</h3>
 				<h3>It Doesn't Hurt</h3>
 			</section>
@@ -549,7 +578,10 @@
 				<h4>We're a team</h4>
 			</section>
 			<section>
-				<h3 class="blue">Don't Take it Personally</h3>
+				<h3 class="blue">Avoid personal "references"</h3>
+			</section>
+			<section>
+				<h4 class="blue">Don't Take it Personally</h4>
 				<h5>Never respond in anger to code review comments, really</h5>
 				<img width="300" data-src="dist/assets/angry.gif">
 			</section>
@@ -558,11 +590,15 @@
 				<h4>Who is right? It doesn't really matter...</h4>
 			</section>
 			<section>
-				<h1>🥁</h1>
+				<h1>Why?</h1>
 			</section>
 			<section>
-				<h2 class="blue">All code is garbage</h2>
+				<h2 style="color: yellow">All code is garbage</h2>
 				<h4>It's up to us to make it a little bit better! 🌈</h4>
+			</section>
+			<section>
+				<h2>That's all, folks</h2>
+				<h3>Thanks!</h3>
 			</section>
 		</div>
 	</div>
